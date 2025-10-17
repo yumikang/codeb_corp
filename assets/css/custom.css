@@ -784,31 +784,11 @@ svg.yellow-stroke,
     background: linear-gradient(135deg, var(--codeb-purple-light) 0%, var(--codeb-purple-dark) 100%) !important;
 }
 
-/* Footer 버튼 스타일 */
-.pp-footer-btn-box .tp_fade_anim {
-    position: relative !important;
-    z-index: 10 !important;
-    pointer-events: auto !important;
-}
-
-.pp-footer-btn {
-    position: relative !important;
-    z-index: 10 !important;
-    pointer-events: auto !important;
-    margin: 10px !important;
-    cursor: pointer !important;
-}
-
-.pp-footer-btn:hover {
-    background-color: var(--codeb-purple-primary) !important;
-    border-color: var(--codeb-purple-primary) !important;
-}
-
-.pp-footer-btn-box {
-    position: relative !important;
-    z-index: 10 !important;
-    gap: 15px !important;
-    pointer-events: auto !important;
+/* Footer 버튼 호버 효과 */
+.pp-footer-area .pp-footer-wrapper .pp-footer-btn-box a.pp-footer-btn:hover {
+    background-color: var(--codeb-purple-primary);
+    border-color: var(--codeb-purple-primary);
+    color: var(--tp-common-white);
 }
 
 /* Service Item 호버 효과 */
