@@ -784,14 +784,14 @@ svg.yellow-stroke,
     background: linear-gradient(135deg, var(--codeb-purple-light) 0%, var(--codeb-purple-dark) 100%) !important;
 }
 
-/* Footer 버튼 호버 효과 - .agntix-light 클래스보다 높은 specificity */
-.agntix-light .pp-footer-area .pp-footer-wrapper .pp-footer-btn-box a.pp-footer-btn:hover {
+/* Footer 버튼 호버 효과 - codeb-footer-btn 클래스로 높은 specificity 확보 */
+.agntix-light .pp-footer-area .pp-footer-wrapper .pp-footer-btn-box a.codeb-footer-btn:hover {
     background-color: var(--codeb-purple-primary);
     border-color: var(--codeb-purple-primary);
     color: #FFFFFF;
 }
 
-.agntix-light .pp-footer-area .pp-footer-wrapper .pp-footer-btn-box a.pp-footer-btn:hover svg path {
+.agntix-light .pp-footer-area .pp-footer-wrapper .pp-footer-btn-box a.codeb-footer-btn:hover svg path {
     stroke: #FFFFFF;
 }
 
