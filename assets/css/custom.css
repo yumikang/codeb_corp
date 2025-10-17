@@ -788,7 +788,11 @@ svg.yellow-stroke,
 .pp-footer-area .pp-footer-wrapper .pp-footer-btn-box a.pp-footer-btn:hover {
     background-color: var(--codeb-purple-primary);
     border-color: var(--codeb-purple-primary);
-    color: var(--tp-common-white);
+    color: #FFFFFF;
+}
+
+.pp-footer-area .pp-footer-wrapper .pp-footer-btn-box a.pp-footer-btn:hover svg path {
+    stroke: #FFFFFF;
 }
 
 /* Service Item 호버 효과 */
