@@ -794,6 +794,7 @@ svg.yellow-stroke,
 .pp-service-item:hover,
 .pp-service-item.current {
     border-color: var(--codeb-purple-primary) !important;
+    border-bottom-color: var(--codeb-purple-primary) !important; /* 밑줄 색상 추가 */
 }
 
 .pp-service-item:hover .pp-service-item-title,
