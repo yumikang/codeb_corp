@@ -837,3 +837,40 @@ svg.yellow-stroke,
 .tp-mobile-menu-active li.has-dropdown.is-active > a {
     color: var(--codeb-purple-primary) !important;
 }
+
+/* ===================================
+   Hero Video Background Support
+   히어로 영상 배경 지원
+   =================================== */
+
+/* 비디오 배경 기본 스타일 */
+.pp-hero-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 비디오 성능 최적화 */
+.pp-hero-bg video {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* 모바일에서 비디오 자동재생 지원 */
+@media (max-width: 767px) {
+    .pp-hero-bg video {
+        object-fit: cover;
+        height: 100vh;
+    }
+}
+
+/* 태블릿 최적화 */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .pp-hero-bg video {
+        object-position: center center;
+    }
+}
