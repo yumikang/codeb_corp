@@ -794,12 +794,16 @@ svg.yellow-stroke,
 .pp-service-item:hover,
 .pp-service-item.current {
     border-color: var(--codeb-purple-primary) !important;
-    border-bottom-color: var(--codeb-purple-primary) !important; /* 밑줄 색상 추가 */
+    border-bottom-color: var(--codeb-purple-primary) !important; /* 밑줄 색상 */
 }
 
-.pp-service-item:hover .pp-service-item-title,
-.pp-service-item.current .pp-service-item-title {
+.pp-service-item:hover .pp-service-item-title {
     color: var(--codeb-purple-primary) !important;
+}
+
+/* current 상태는 텍스트 색상 검은색 유지 */
+.pp-service-item.current .pp-service-item-title {
+    color: inherit !important; /* 검은색으로 유지 */
 }
 
 /* Project Item 호버 */
