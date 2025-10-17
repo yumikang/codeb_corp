@@ -874,3 +874,32 @@ svg.yellow-stroke,
         object-position: center center;
     }
 }
+
+/* YouTube iframe 배경 스타일 */
+.pp-hero-bg iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* 16:9 비율 유지 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* 16:9 비율 유지 */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border: none;
+}
+
+/* iframe 성능 최적화 */
+.pp-hero-bg iframe {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* 모바일에서 YouTube iframe 최적화 */
+@media (max-width: 767px) {
+    .pp-hero-bg iframe {
+        height: 100vh;
+        width: 177.77vh;
+    }
+}

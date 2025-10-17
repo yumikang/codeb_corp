@@ -255,12 +255,19 @@
                 <!-- hero area start -->
                 <div class="pp-hero-area pp-hero-hight pp-hero-ptb z-index-1 d-flex align-items-end" data-background="assets/img/home-14/hero/hero-thumb-bg.jpg">
                     <div class="pp-hero-bg">
-                        <!-- 비디오로 변경 가능: 아래 video 태그 주석 해제하고 img 태그 주석 처리 -->
-                        <!-- <video data-speed=".8" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                        <!-- YouTube 배경 영상 (VIDEO_ID를 원하는 유튜브 영상 ID로 변경하세요) -->
+                        <iframe
+                            id="hero-youtube"
+                            src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                            style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 100vh; transform: translate(-50%, -50%); pointer-events: none; object-fit: cover;">
+                        </iframe>
+                        <!-- YouTube 로딩 실패 시 로컬 비디오 폴백 -->
+                        <video id="hero-fallback-video" autoplay muted loop playsinline style="display: none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
                             <source src="assets/video/hero-video.mp4" type="video/mp4">
-                            <source src="assets/video/hero-video.webm" type="video/webm">
-                        </video> -->
-                        <img data-speed=".8" src="assets/img/home-14/hero/hero-thumb-1.png" alt="">
+                        </video>
                     </div>
                     <div class="container container-1800">
                         <div class="row">
@@ -1281,6 +1288,56 @@
     <!-- JS here -->
 
     <!-- JS here -->
+
+    <!-- YouTube Fallback Script -->
+    <script>
+        (function() {
+            // YouTube iframe 로딩 체크 및 폴백 처리
+            const youtube = document.getElementById('hero-youtube');
+            const fallbackVideo = document.getElementById('hero-fallback-video');
+
+            if (youtube && fallbackVideo) {
+                let loadTimeout;
+                let hasLoaded = false;
+
+                // YouTube 로딩 타임아웃 설정 (5초)
+                loadTimeout = setTimeout(function() {
+                    if (!hasLoaded) {
+                        console.log('YouTube 로딩 실패 - 로컬 비디오로 전환');
+                        activateFallback();
+                    }
+                }, 5000);
+
+                // YouTube iframe 로드 성공
+                youtube.addEventListener('load', function() {
+                    hasLoaded = true;
+                    clearTimeout(loadTimeout);
+                    console.log('YouTube 비디오 로딩 성공');
+                });
+
+                // YouTube iframe 에러 처리
+                youtube.addEventListener('error', function() {
+                    console.log('YouTube 에러 발생 - 로컬 비디오로 전환');
+                    activateFallback();
+                });
+
+                // 폴백 비디오 활성화 함수
+                function activateFallback() {
+                    youtube.style.display = 'none';
+                    fallbackVideo.style.display = 'block';
+                    fallbackVideo.play().catch(function(error) {
+                        console.log('로컬 비디오 재생 실패:', error);
+                    });
+                }
+
+                // 네트워크 오프라인 감지
+                window.addEventListener('offline', function() {
+                    console.log('네트워크 오프라인 - 로컬 비디오로 전환');
+                    activateFallback();
+                });
+            }
+        })();
+    </script>
 
 </body>
 
