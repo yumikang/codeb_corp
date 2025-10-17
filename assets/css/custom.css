@@ -75,6 +75,19 @@
     --codeb-ff-primary: 'Paperozi', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --codeb-ff-body: 'Paperozi', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --codeb-ff-heading: 'Paperozi', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+    /* codeB 보라색 테마 컬러 (노란색 대체) */
+    --codeb-purple-primary: #8B5CF6;    /* 메인 보라 (Violet 500) */
+    --codeb-purple-light: #A78BFA;      /* 밝은 보라 (Violet 400) */
+    --codeb-purple-dark: #7C3AED;       /* 진한 보라 (Violet 600) */
+    --codeb-purple-accent: #C4B5FD;     /* 연한 보라 (Violet 300) */
+    --codeb-purple-deep: #6D28D9;       /* 깊은 보라 (Violet 700) */
+
+    /* 기존 노란색 변수 오버라이드 */
+    --tp-common-yellow: var(--codeb-purple-primary);
+    --tp-common-yellow-1: var(--codeb-purple-light);
+    --tp-common-yellow-green: var(--codeb-purple-accent);
+    --tp-theme-yellow: var(--codeb-purple-primary);
 }
 
 /* ===================================
@@ -180,6 +193,7 @@ h1, h2, h3, h4, h5, h6,
 .pp-footer-title {
     font-family: var(--codeb-ff-heading) !important;
     font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem) !important; /* 폰트 크기 조정 */
 }
 
 .pp-footer-copyright-text p {
@@ -695,4 +709,121 @@ p, div, span {
     .pp-service-item-title {
         font-size: clamp(1.3rem, 5.5vw, 1.6rem) !important;
     }
+}
+
+/* ===================================
+   Theme Color Override - Purple Theme
+   테마 컬러 오버라이드 - 보라색 테마
+   =================================== */
+
+/* 커서 배경색 변경 (노란색 → 보라색) */
+.cursor-bg-yellow #ball {
+    background-color: var(--codeb-purple-primary) !important;
+}
+
+.cursor-bg-yellow #ball .ball-view {
+    background-color: var(--codeb-purple-light) !important;
+}
+
+/* 버튼 배경색 오버라이드 */
+.tp-btn-yellow,
+.tp-btn-yellow-green {
+    background-color: var(--codeb-purple-primary) !important;
+}
+
+.tp-btn-yellow:hover,
+.tp-btn-yellow-green:hover {
+    background-color: var(--codeb-purple-dark) !important;
+}
+
+/* 링크 호버 색상 */
+a:hover,
+.tp-line-white:hover {
+    color: var(--codeb-purple-light) !important;
+}
+
+/* 테두리 및 언더라인 색상 */
+.tp-border-yellow,
+.border-yellow {
+    border-color: var(--codeb-purple-primary) !important;
+}
+
+/* 텍스트 색상 오버라이드 */
+.text-yellow,
+.tp-text-yellow {
+    color: var(--codeb-purple-primary) !important;
+}
+
+/* 배경색 오버라이드 */
+.bg-yellow,
+.tp-bg-yellow,
+.yellow-bg {
+    background-color: var(--codeb-purple-primary) !important;
+}
+
+/* 액센트 요소 (점, 아이콘 등) */
+.tp-accent-yellow,
+.accent-yellow {
+    color: var(--codeb-purple-primary) !important;
+}
+
+/* SVG 아이콘 색상 */
+svg.yellow-fill,
+.yellow-fill svg {
+    fill: var(--codeb-purple-primary) !important;
+}
+
+svg.yellow-stroke,
+.yellow-stroke svg {
+    stroke: var(--codeb-purple-primary) !important;
+}
+
+/* 그라데이션 배경 (노란색 → 보라색) */
+.gradient-yellow,
+.tp-gradient-yellow {
+    background: linear-gradient(135deg, var(--codeb-purple-light) 0%, var(--codeb-purple-dark) 100%) !important;
+}
+
+/* Footer 버튼 호버 */
+.pp-footer-btn:hover {
+    background-color: var(--codeb-purple-primary) !important;
+    border-color: var(--codeb-purple-primary) !important;
+}
+
+/* Service Item 호버 효과 */
+.pp-service-item:hover,
+.pp-service-item.current {
+    border-color: var(--codeb-purple-primary) !important;
+}
+
+.pp-service-item:hover .pp-service-item-title,
+.pp-service-item.current .pp-service-item-title {
+    color: var(--codeb-purple-primary) !important;
+}
+
+/* Project Item 호버 */
+.pp-project-item:hover {
+    border-color: var(--codeb-purple-primary) !important;
+}
+
+/* Hero 텍스트 하이라이트 */
+.pp-hero-text .highlight,
+.text-highlight {
+    color: var(--codeb-purple-primary) !important;
+}
+
+/* 로딩 스피너 */
+.preloader span {
+    background-color: var(--codeb-purple-primary) !important;
+}
+
+/* Offcanvas 액센트 색상 */
+.tp-offcanvas-2-close-btn:hover {
+    color: var(--codeb-purple-primary) !important;
+}
+
+/* 네비게이션 액티브 상태 */
+.tp-mobile-menu-active li.is-active > a,
+.tp-mobile-menu-active li.has-dropdown.is-active > a {
+    color: var(--codeb-purple-primary) !important;
 }
