@@ -785,11 +785,18 @@ svg.yellow-stroke,
 }
 
 /* Footer 버튼 스타일 */
+.pp-footer-btn-box .tp_fade_anim {
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
 .pp-footer-btn {
     position: relative !important;
     z-index: 10 !important;
     pointer-events: auto !important;
     margin: 10px !important;
+    cursor: pointer !important;
 }
 
 .pp-footer-btn:hover {
@@ -801,6 +808,7 @@ svg.yellow-stroke,
     position: relative !important;
     z-index: 10 !important;
     gap: 15px !important;
+    pointer-events: auto !important;
 }
 
 /* Service Item 호버 효과 */
