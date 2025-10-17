@@ -613,3 +613,86 @@ p, div, span {
         page-break-after: avoid;
     }
 }
+
+/* ===================================
+   Service Item Title Size & Layout
+   서비스 타이틀 크기 및 레이아웃 조정
+   =================================== */
+
+/* 서비스 아이템 전체 레이아웃 */
+.pp-service-wrapper {
+    padding-left: 80px !important; /* 좌측 여백 추가 */
+    padding-right: 80px !important; /* 우측 여백 추가 */
+}
+
+/* 서비스 아이템 개별 스타일 */
+.pp-service-item {
+    padding: 40px 60px !important; /* 상하좌우 패딩 증가 */
+}
+
+/* 서비스 타이틀 폰트 크기 */
+.pp-service-item-title {
+    font-size: 2.8rem !important; /* 기본 크기 증가 */
+    letter-spacing: -0.02em !important;
+}
+
+/* 반응형 폰트 크기 및 레이아웃 */
+@media (min-width: 1200px) {
+    .pp-service-wrapper {
+        padding-left: 120px !important;
+        padding-right: 120px !important;
+    }
+
+    .pp-service-item {
+        padding: 50px 80px !important;
+    }
+
+    .pp-service-item-title {
+        font-size: clamp(2.5rem, 4vw, 3.2rem) !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .pp-service-wrapper {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+
+    .pp-service-item {
+        padding: 35px 50px !important;
+    }
+
+    .pp-service-item-title {
+        font-size: clamp(2rem, 4vw, 2.5rem) !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .pp-service-wrapper {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .pp-service-item {
+        padding: 25px 30px !important;
+    }
+
+    .pp-service-item-title {
+        font-size: clamp(1.5rem, 5vw, 2rem) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pp-service-wrapper {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .pp-service-item {
+        padding: 20px 25px !important;
+    }
+
+    .pp-service-item-title {
+        font-size: clamp(1.3rem, 5.5vw, 1.6rem) !important;
+    }
+}
