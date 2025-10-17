@@ -1,0 +1,615 @@
+/* ===================================
+   codeB Custom CSS - Font Settings
+   =================================== */
+
+/* Paperozi 웹폰트 (한글/영문) */
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* ===================================
+   CSS Variables Override
+   =================================== */
+
+:root {
+    /* Paperozi 폰트 변수 */
+    --codeb-ff-primary: 'Paperozi', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --codeb-ff-body: 'Paperozi', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --codeb-ff-heading: 'Paperozi', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* ===================================
+   Global Font Application
+   =================================== */
+
+/* Body 전체 폰트 */
+body {
+    font-family: var(--codeb-ff-body) !important;
+}
+
+/* 모든 텍스트 요소 */
+body, p, span, div, a, li, td, th, input, textarea, select, button {
+    font-family: var(--codeb-ff-body) !important;
+}
+
+/* 헤딩 요소 */
+h1, h2, h3, h4, h5, h6,
+.tp-section-title,
+.tp-section-subtitle,
+.pp-hero-title,
+.pp-hero-text,
+.pp-service-item-title,
+.pp-about-heading,
+.pp-project-item-title,
+.pp-footer-title {
+    font-family: var(--codeb-ff-heading) !important;
+}
+
+/* 기존 템플릿 클래스 오버라이드 */
+.tp-ff-body,
+.tp-ff-heading,
+.tp-ff-p,
+.tp-ff-inter,
+.body-ff {
+    font-family: var(--codeb-ff-body) !important;
+}
+
+/* 특수 폰트 클래스도 Paperozi로 변경 (선택적) */
+.tp-ff-clash-light,
+.tp-ff-clash-regular,
+.tp-ff-clash-medium,
+.tp-ff-clash-semibold,
+.tp-ff-clash-bold {
+    font-family: var(--codeb-ff-heading) !important;
+}
+
+/* Teko 폰트 사용 부분도 Paperozi로 */
+.tp-section-title-teko,
+.fs-120,
+.fs-80 {
+    font-family: var(--codeb-ff-heading) !important;
+}
+
+/* ===================================
+   Specific Sections
+   =================================== */
+
+/* Hero Section */
+.pp-hero-area .pp-hero-text {
+    font-family: var(--codeb-ff-heading) !important;
+    font-weight: 700;
+}
+
+.pp-hero-area .pp-hero-title {
+    font-family: var(--codeb-ff-heading) !important;
+    font-weight: 900;
+}
+
+.pp-hero-area p {
+    font-family: var(--codeb-ff-body) !important;
+    font-weight: 400;
+}
+
+/* Service Section */
+.pp-service-heading span {
+    font-family: var(--codeb-ff-heading) !important;
+    font-weight: 600;
+}
+
+.pp-service-item-title {
+    font-family: var(--codeb-ff-heading) !important;
+    font-weight: 600;
+}
+
+/* About/Vision Section */
+.pp-about-heading h3 {
+    font-family: var(--codeb-ff-heading) !important;
+    font-weight: 700;
+}
+
+.pp-about-content p {
+    font-family: var(--codeb-ff-body) !important;
+    font-weight: 400;
+}
+
+/* Footer */
+.pp-footer-subtitle {
+    font-family: var(--codeb-ff-body) !important;
+    font-weight: 400;
+}
+
+.pp-footer-title {
+    font-family: var(--codeb-ff-heading) !important;
+    font-weight: 700;
+}
+
+.pp-footer-copyright-text p {
+    font-family: var(--codeb-ff-body) !important;
+    font-weight: 400;
+}
+
+/* ===================================
+   Buttons & Links
+   =================================== */
+
+.tp-btn-red-circle-text,
+.pp-footer-btn {
+    font-family: var(--codeb-ff-body) !important;
+    font-weight: 600;
+}
+
+/* ===================================
+   Font Weight Utilities
+   =================================== */
+
+.fw-thin { font-weight: 100 !important; }
+.fw-extralight { font-weight: 200 !important; }
+.fw-light { font-weight: 300 !important; }
+.fw-regular { font-weight: 400 !important; }
+.fw-medium { font-weight: 500 !important; }
+.fw-semibold { font-weight: 600 !important; }
+.fw-bold { font-weight: 700 !important; }
+.fw-extrabold { font-weight: 800 !important; }
+.fw-black { font-weight: 900 !important; }
+
+/* ===================================
+   Additional Optimizations
+   =================================== */
+
+/* 한글 자간 최적화 */
+body, p, span {
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+}
+
+/* 줄간격 최적화 */
+body, p {
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+}
+
+/* 텍스트 렌더링 최적화 */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* ===================================
+   Fix Split Text Animation Markers
+   텍스트 애니메이션 마커 제거
+   =================================== */
+
+/* Split text 애니메이션 마커 숨기기 - 강력한 버전 */
+.tp-split-text::before,
+.tp-split-text::after,
+.tp_text_anim::before,
+.tp_text_anim::after,
+.tp-text-revel-anim::before,
+.tp-text-revel-anim::after,
+.tp_fade_anim::before,
+.tp_fade_anim::after,
+.pp-hero-text::before,
+.pp-hero-text::after {
+    content: "" !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Split text 내부 요소 마커 제거 */
+.tp-split-text .char::before,
+.tp-split-text .char::after,
+.tp-split-text .word::before,
+.tp-split-text .word::after,
+.tp_text_anim .char::before,
+.tp_text_anim .char::after,
+.tp_text_anim .word::before,
+.tp_text_anim .word::after,
+.tp-split-text span::before,
+.tp-split-text span::after {
+    content: "" !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* 모든 애니메이션 클래스의 의사요소 제거 */
+[class*="tp-split"]::before,
+[class*="tp-split"]::after,
+[class*="tp_text"]::before,
+[class*="tp_text"]::after,
+[class*="tp_fade"]::before,
+[class*="tp_fade"]::after,
+[class*="tp-split"] *::before,
+[class*="tp-split"] *::after,
+[class*="tp_text"] *::before,
+[class*="tp_text"] *::after {
+    content: "" !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* 특수 문자 숨기기 (최종 방어선) */
+.tp-split-text,
+.tp_text_anim,
+.pp-hero-text {
+    position: relative;
+}
+
+/* JavaScript가 추가하는 텍스트 노드의 특수문자 숨기기 */
+.char, .word {
+    display: inline-block;
+}
+
+.char::before,
+.word::before {
+    content: "" !important;
+    display: none !important;
+}
+
+/* ===================================
+   Korean Typography Optimization
+   한국어 타이포그래피 최적화
+   =================================== */
+
+/* 전체 텍스트 한국어 최적화 */
+body, p, span, div, a, li {
+    word-break: keep-all; /* 한국어 단어 단위 줄바꿈 */
+    word-wrap: break-word; /* 긴 단어 자동 줄바꿈 */
+    overflow-wrap: break-word; /* 오버플로우 방지 */
+}
+
+/* 본문 텍스트 가독성 향상 */
+p, .tp_text_anim p, .pp-about-content p {
+    word-break: keep-all;
+    line-height: 1.8; /* 한글은 더 넓은 행간 필요 */
+    text-align: left; /* 왼쪽 정렬 (한국어에 적합) */
+    hyphens: auto; /* 자동 하이픈 처리 */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* 헤딩 텍스트 최적화 */
+h1, h2, h3, h4, h5, h6 {
+    word-break: keep-all;
+    line-height: 1.4; /* 헤딩은 조금 더 타이트하게 */
+}
+
+/* ===================================
+   Card & Container Optimization
+   카드 및 컨테이너 최적화
+   =================================== */
+
+/* 카드 요소 공통 스타일 */
+.pp-service-item,
+.pp-project-item,
+.pp-about-content,
+.pp-footer-wrapper,
+.process-card,
+.card,
+.content-card {
+    max-width: 100%;
+    padding: clamp(16px, 3vw, 24px);
+}
+
+/* 프로세스 카드 (일반 카드) */
+.process-card {
+    max-width: 320px;
+    padding: 20px;
+}
+
+.process-card p {
+    word-break: keep-all;
+    line-height: 1.7;
+    text-align: left;
+    hyphens: auto;
+    font-size: clamp(0.875rem, 2.2vw, 0.95rem);
+    letter-spacing: -0.01em;
+}
+
+/* ===================================
+   Responsive Typography
+   반응형 타이포그래피
+   =================================== */
+
+/* 데스크톱 (1200px 이상) */
+@media (min-width: 1200px) {
+    body, p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); }
+    h3 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+    h4 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+    h5 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+    h6 { font-size: clamp(1rem, 1.5vw, 1.25rem); }
+
+    .process-card,
+    .card {
+        max-width: 320px;
+        padding: 24px;
+    }
+}
+
+/* 태블릿 (768px ~ 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    body, p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+    h4 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+
+    .process-card,
+    .card {
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .pp-hero-area p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+    body, p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    h1 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+    h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+    h3 { font-size: clamp(1.25rem, 4vw, 1.75rem); }
+    h4 { font-size: clamp(1.1rem, 3vw, 1.5rem); }
+    h5 { font-size: clamp(1rem, 2.5vw, 1.25rem); }
+    h6 { font-size: clamp(0.95rem, 2vw, 1.1rem); }
+
+    .process-card,
+    .card,
+    .content-card {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .pp-hero-area p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .pp-service-item-title {
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
+        line-height: 1.5;
+    }
+
+    /* 모바일에서 자간 조정 */
+    body, p, span {
+        letter-spacing: -0.005em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        letter-spacing: -0.015em;
+    }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    body, p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+    h2 { font-size: clamp(1.25rem, 6vw, 1.75rem); }
+    h3 { font-size: clamp(1.1rem, 5vw, 1.5rem); }
+
+    .process-card p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+}
+
+/* ===================================
+   Specific Section Optimization
+   섹션별 최적화
+   =================================== */
+
+/* Hero Section */
+.pp-hero-area .pp-hero-text {
+    word-break: keep-all;
+    line-height: 1.3;
+}
+
+.pp-hero-area p {
+    word-break: keep-all;
+    line-height: 1.8;
+    max-width: 100%;
+}
+
+/* Service Section */
+.pp-service-item {
+    max-width: 100%;
+}
+
+.pp-service-item-title {
+    word-break: keep-all;
+    line-height: 1.4;
+    padding: clamp(12px, 2vw, 20px);
+}
+
+/* About/Vision Section */
+.pp-about-heading h3 {
+    word-break: keep-all;
+    line-height: 1.35;
+    max-width: 100%;
+}
+
+.pp-about-content p {
+    word-break: keep-all;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Project Section */
+.pp-project-item-title {
+    word-break: keep-all;
+    line-height: 1.4;
+}
+
+.pp-project-item-subtitle {
+    word-break: keep-all;
+}
+
+/* Footer */
+.pp-footer-subtitle {
+    word-break: keep-all;
+    line-height: 1.6;
+}
+
+.pp-footer-title {
+    word-break: keep-all;
+    line-height: 1.3;
+}
+
+.pp-footer-copyright-text p {
+    word-break: keep-all;
+    line-height: 1.6;
+}
+
+/* ===================================
+   Text Alignment & Justify
+   텍스트 정렬
+   =================================== */
+
+/* 기본 왼쪽 정렬 (한국어에 적합) */
+p, div, span {
+    text-align: left;
+}
+
+/* 센터 정렬이 필요한 섹션 */
+.text-center,
+.pp-footer-wrapper.text-center,
+.pp-hero-heading.text-center {
+    text-align: center !important;
+}
+
+.text-center p,
+.text-center h1,
+.text-center h2,
+.text-center h3,
+.text-center h4 {
+    word-break: keep-all;
+}
+
+/* ===================================
+   Utility Classes
+   유틸리티 클래스
+   =================================== */
+
+/* 줄바꿈 제어 */
+.keep-all { word-break: keep-all; }
+.break-word { word-break: break-word; }
+.no-break { white-space: nowrap; }
+
+/* 행간 제어 */
+.lh-tight { line-height: 1.3; }
+.lh-normal { line-height: 1.6; }
+.lh-relaxed { line-height: 1.8; }
+.lh-loose { line-height: 2.0; }
+
+/* 자간 제어 */
+.ls-tight { letter-spacing: -0.02em; }
+.ls-normal { letter-spacing: 0; }
+.ls-wide { letter-spacing: 0.02em; }
+
+/* ===================================
+   Print Optimization
+   인쇄 최적화
+   =================================== */
+
+@media print {
+    body, p {
+        word-break: keep-all;
+        line-height: 1.6;
+        font-size: 12pt;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        word-break: keep-all;
+        page-break-after: avoid;
+    }
+}
